@@ -7,8 +7,8 @@
 //	See readme.md for usage, demo, and licensing info
 //
 // error_reporting(E_ALL & ~E_NOTICE);
-
-function simple_php_captcha($config = array()) {
+class SimpleCaptcha{
+ function simple_php_captcha($config = array()) {
 	
 	// Check for GD library
 	if( !function_exists('gd_info') ) {
@@ -182,4 +182,5 @@ if( isset($_GET['_CAPTCHA']) ) {
 	header("Content-type: image/png");
 	imagepng($captcha);
 	
+ }
 }
