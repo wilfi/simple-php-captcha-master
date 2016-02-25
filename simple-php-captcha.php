@@ -8,7 +8,7 @@
 //
 // error_reporting(E_ALL & ~E_NOTICE);
 class SimpleCaptcha{
- function simple_php_captcha($config = array()) {
+ public function simple_php_captcha($config = array()) {
 	
 	// Check for GD library
 	if( !function_exists('gd_info') ) {
